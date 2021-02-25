@@ -1,0 +1,240 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FBFDF5;
+}
+
+@mixin big-title {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  color: #1E1A34;
+  text-align: center;
+}
+@mixin text-item {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  width: 156px;
+  height: 96px;
+  text-align: left;
+  color: #1E1A34;
+  margin-left: 26px;
+  margin-top: 0;
+  }
+@mixin num-item {
+  width: 60px;
+  height: 28px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+  color: #2C2E65;
+  margin-right: 60px;
+  margin-top: 5px;
+  margin-left: 54px;
+}
+.page {
+  width: 934px;
+  margin: 90px auto 73px;
+  background-color: #FBFDF5;
+  .container {
+    display: flex;
+    .box-1 {
+      width: 50%;
+      .p-1 {
+        width: 340px;
+        height: 96px;
+        margin: 4px auto 0;
+        @include big-title;
+      }
+      .item {
+        margin-top: 70px;
+        img {
+          width: 48.4px;
+          height: 82.49px;
+          margin: 15.15px 32.6px 16.36px 33px;
+        }
+        p {
+          @include text-item;
+        }
+        .num {
+          @include num-item;
+        }
+        &-1 {
+          display: flex;
+          margin-bottom: 69px
+        }
+        &-2 {
+          display: flex;
+          margin-bottom: 58px
+        }
+        &-3 {
+          display: flex;
+          margin-bottom: 90px
+        }
+        &-total {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 55px 0 140px;
+          @include big-title;
+        }
+      }
+
+      .p-footer {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #B5B5B5;
+        margin-top: 41px;
+        padding-right: 32px;
+      }
+    }
+    .box-2 {
+      height: 836px;
+      border-left: 1px solid #D8D8D8;
+      width: 50%;
+      text-align: center;
+      .p-5 {
+        width: 340px;
+        height: 64px;
+        margin: 0 auto;
+        @include big-title;
+      }
+      img {
+        width: 226px;
+        height: auto;
+        margin-top: 102px;
+      }
+      .p-6 {
+        width: 340px;
+        height: 96px;
+        margin: -12px auto 0;
+        @include big-title;
+      }
+      .num-3 {
+        width: 100px;
+        height: 28px;
+        margin: 30px auto 0;
+        @include big-title;
+      }
+      .btn{
+        display: inline-block;
+        font-family: 'Poppins';
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 12px 40px 15px 40px;
+        background-color:#A4D233;
+        border-radius: 5px;
+        border: none;
+        margin-top: 41px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1056px) {
+  .page {
+    width: 800px;
+    .container {
+      .box-1 {
+        .item {
+          .num {
+            margin-right: 30px;
+            margin-left: 20px;
+          }
+        }
+        .item-total {
+          padding: 0 26px 0 140px;
+        }
+        .p-footer {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 906px) {
+  .page {
+    width: 700px;
+    .container {
+      .box-2 {
+        .p-5, .p-6  {
+          font-size: 18px;
+        }
+        img {
+          width: 213px;
+        }
+      }
+      .box-1 {
+        .p-1 {
+          font-size: 18px;
+          padding: 0 30px;
+        }
+        .item {
+          p {
+            font-size: 18px;
+            margin-left: 0px;
+          }
+        }
+        .item-total {
+          padding: 0 28px 0 112px;
+          font-size: 18px;
+        }
+        .p-footer {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 797px) {
+  .page {
+    width: 500px;
+    .container {
+      display: block;
+      .box-1 {
+        width: 100%;
+        .p-1 {
+          padding: 0;
+        }
+        .item {
+          width: 55%;
+          margin: 70px auto 40px;
+          img {
+            margin-left: 0;
+          }
+          .num {
+            margin-right: -12px;
+          }
+        }
+        .item-total {
+          padding-left: 80px;
+          padding-right: 0;
+        }
+        .p-footer {
+          width: 62%;
+          margin: 0 auto;
+        }
+      }
+      .box-2 {
+        border-left: none;
+        margin-top: 90px;
+        width: 100%;
+        img {
+          width: 200px;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
